@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Assessment</title>
+</head>
+<body>
+    <h1>Take Assessment</h1>
+    <form action="{% url 'take_assessment' %}" method="post">
+        {% csrf_token %}
+        <label for="score">Enter your score:</label>
+        <input type="number" name="score" id="score" min="0" max="100" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

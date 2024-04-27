@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Query</title>
+</head>
+<body>
+    <h1>Submit Query</h1>
+    <form action="{% url 'submit_query' %}" method="post">
+        {% csrf_token %}
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" required><br>
+        <label for="query">Your Query:</label>
+        <textarea name="query" id="query" rows="4" cols="50" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
